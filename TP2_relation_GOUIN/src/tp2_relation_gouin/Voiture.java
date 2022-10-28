@@ -9,5 +9,20 @@ package tp2_relation_gouin;
  * @author gouin
  */
 public class Voiture {
+    String Modèle;
+    String Marque;
+    int PuissanceCV;
+    Personne Proprietaire ;
+    
+    public Voiture (String modele, String marque, int Puissance, Personne NULL) {
+        Modèle = modele;
+        Marque = marque;
+        PuissanceCV = Puissance;
+    }
+    @Override
+    public String toString () {
+        return "Modèle : " + Modèle + "\nMarque : " + Marque + "\nPuissanceCV : " + PuissanceCV;
+
+    }
     
 }
