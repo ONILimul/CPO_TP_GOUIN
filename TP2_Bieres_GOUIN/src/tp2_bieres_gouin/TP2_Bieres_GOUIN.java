@@ -16,32 +16,32 @@ public class TP2_Bieres_GOUIN {
     public static void main(String[] args) {
         // TODO code application logic here
         BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls", 
-7.0 ,"Dubuisson") ;
-        uneBiere.lireEtiquette();
+7.0 ,"Dubuisson") ; // on creer un nouvel objet avec ses caractéristiques
+        uneBiere.lireEtiquette(); 
         
         BouteilleBiere Leffe = new BouteilleBiere ("Leffe", 6.6, "Abbaye de Leffe" ) ;
-        Leffe.lireEtiquette();
+        Leffe.lireEtiquette(); // on creer un nouvel objet avec ses caractéristiques
         
         BouteilleBiere Skoll = new BouteilleBiere ("Skoll", 6.0, "Kronenbourg" ) ;
-        Skoll.lireEtiquette();
+        Skoll.lireEtiquette();// on creer un nouvel objet avec ses caractéristiques
         
         BouteilleBiere Desperado = new BouteilleBiere ("Desperado", 5.9, "Brasserie Heineken" ) ;
-        Desperado.lireEtiquette();
+        Desperado.lireEtiquette();// on creer un nouvel objet avec ses caractéristiques
         
         BouteilleBiere Corona = new BouteilleBiere ("Corona", 4.5, "La Cerveza Mas Fina" ) ;
-        Corona.lireEtiquette();
+        Corona.lireEtiquette();// on creer un nouvel objet avec ses caractéristiques
         
-        System.out.println(uneBiere.Décapsuler());
+        System.out.println(uneBiere.Décapsuler()); // on teste la méthode décapsuler
         System.out.println(Leffe.Décapsuler());
         System.out.println(uneBiere) ;
         
         BouteilleBiere Affligem = new BouteilleBiere ("Affligem", 6.8, "Bière belge d'Abbaye reconnue" ) ;
-        Affligem.lireEtiquette();
+        Affligem.lireEtiquette();// on creer un nouvel objet avec ses caractéristiques
         System.out.println(Affligem.Décapsuler());
         System.out.println(Affligem);
         
         BouteilleBiere la86 = new BouteilleBiere ("la86", 7.9, "Brasserie Difré" ) ;
-        la86.lireEtiquette();
+        la86.lireEtiquette();// on creer un nouvel objet avec ses caractéristiques
         System.out.println(la86.Décapsuler());
         System.out.println(la86);
 
