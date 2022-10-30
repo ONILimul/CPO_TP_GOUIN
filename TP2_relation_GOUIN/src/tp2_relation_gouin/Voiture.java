@@ -9,15 +9,16 @@ package tp2_relation_gouin;
  * @author gouin
  */
 public class Voiture {
-    String Modèle;
+    String Modèle; //on initialise nos variables que l'on utilisera dans le code
     String Marque;
     int PuissanceCV;
     Personne Proprietaire ;
     
-    public Voiture (String modele, String marque, int Puissance, Personne NULL) {
+    public Voiture (String modele, String marque, int Puissance) {
         Modèle = modele;
         Marque = marque;
         PuissanceCV = Puissance;
+        Proprietaire = null;
     }
     @Override
     public String toString () {
