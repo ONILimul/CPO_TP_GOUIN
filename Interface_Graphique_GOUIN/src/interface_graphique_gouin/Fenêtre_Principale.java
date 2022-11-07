@@ -18,6 +18,7 @@ public class Fenêtre_Principale extends javax.swing.JFrame {
         System.out.println("fenêtre créée");
         Msg_Bienvenue.setText("Bonjour le monde");
         Resultat.setVisible(false);
+        Msg_Bye.setVisible(false);
     }
 
     /**
@@ -32,103 +33,56 @@ public class Fenêtre_Principale extends javax.swing.JFrame {
         Msg_Bienvenue = new javax.swing.JLabel();
         Msg_Bye = new javax.swing.JLabel();
         bouton_valide = new javax.swing.JButton();
-        ZoneNom = new javax.swing.JTextField();
-        Demande = new javax.swing.JLabel();
-        Resultat = new javax.swing.JLabel();
+        ZonePrenom = new javax.swing.JTextField();
+        demandePrenom = new javax.swing.JLabel();
         demandeSalaire = new javax.swing.JLabel();
-        Salaire = new javax.swing.JTextField();
-        AugmenterSalaire = new javax.swing.JButton();
+        ZoneSalaire = new javax.swing.JTextField();
+        Resultat0 = new javax.swing.JScrollPane();
+        Resultat = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Msg_Bienvenue.setText("Hello Word");
+        Msg_Bienvenue.setText("Bonjour ! Nous allons faire un test");
+        getContentPane().add(Msg_Bienvenue, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 6, -1, -1));
 
-        Msg_Bye.setText("Bye Bye !!!");
+        Msg_Bye.setText("Merci pour ton argent !!!");
+        getContentPane().add(Msg_Bye, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, -1, -1));
 
-        bouton_valide.setText("Cliquez !!!!!!");
+        bouton_valide.setBackground(new java.awt.Color(0, 255, 0));
+        bouton_valide.setText("Clique pour découvrir la vérité...");
         bouton_valide.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bouton_valideActionPerformed(evt);
             }
         });
+        getContentPane().add(bouton_valide, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, -1, -1));
 
-        ZoneNom.addActionListener(new java.awt.event.ActionListener() {
+        ZonePrenom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ZoneNomActionPerformed(evt);
+                ZonePrenomActionPerformed(evt);
             }
         });
+        getContentPane().add(ZonePrenom, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 240, -1));
 
-        Demande.setText("Entrez votre prénom :");
+        demandePrenom.setText("Entrez votre prénom :");
+        getContentPane().add(demandePrenom, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 36, -1, -1));
 
-        Resultat.setText("Résultat :");
+        demandeSalaire.setText("Entrez votre salaire (par mois) :");
+        getContentPane().add(demandeSalaire, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 108, -1, -1));
 
-        demandeSalaire.setText("Entrez votre salaire :");
-
-        Salaire.addActionListener(new java.awt.event.ActionListener() {
+        ZoneSalaire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalaireActionPerformed(evt);
+                ZoneSalaireActionPerformed(evt);
             }
         });
+        getContentPane().add(ZoneSalaire, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 182, -1));
 
-        AugmenterSalaire.setText("TOUJOURS PLUS !");
-        AugmenterSalaire.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AugmenterSalaireActionPerformed(evt);
-            }
-        });
+        Resultat.setColumns(20);
+        Resultat.setRows(5);
+        Resultat0.setViewportView(Resultat);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(173, 173, 173)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bouton_valide)
-                    .addComponent(Msg_Bye)
-                    .addComponent(Msg_Bienvenue))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(demandeSalaire)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Salaire, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(AugmenterSalaire)
-                        .addGap(0, 25, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Resultat)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Demande)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ZoneNom, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Msg_Bienvenue)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ZoneNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Demande))
-                .addGap(45, 45, 45)
-                .addComponent(bouton_valide)
-                .addGap(28, 28, 28)
-                .addComponent(Resultat)
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(demandeSalaire)
-                    .addComponent(Salaire, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AugmenterSalaire))
-                .addGap(25, 25, 25)
-                .addComponent(Msg_Bye)
-                .addContainerGap())
-        );
+        getContentPane().add(Resultat0, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 180, 310, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -136,26 +90,29 @@ public class Fenêtre_Principale extends javax.swing.JFrame {
     private void bouton_valideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_valideActionPerformed
         // TODO add your handling code here:
         Msg_Bye.setText("Bonne fin de journée !");
-        String a = ZoneNom.getText();
-        Resultat.setText("Bonjour mon brave " + a);
-        Resultat.setVisible(true);
+        String a = ZonePrenom.getText();
+        String Argent = ZoneSalaire.getText();
+        int argent_entier = Integer.parseInt(Argent);
+        if (argent_entier > 3000) {
+            Resultat.setText("Mon brave " + a + " tu es considéré comme Riche...\nDonne moi ton fric tout de suite !!");
+            Resultat.setVisible(true);
+            Msg_Bye.setVisible(true);     
+        }
+        if (argent_entier <= 3000) {
+            Resultat.setText("Mon brave " + a + " tu es considéré comme Pauvre...\nDonne moi ton argent...ou ce qui te reste...");
+            Resultat.setVisible(true);
+            Msg_Bye.setVisible(true);
+        }
+        
     }//GEN-LAST:event_bouton_valideActionPerformed
 
-    private void ZoneNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZoneNomActionPerformed
+    private void ZoneSalaireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZoneSalaireActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ZoneNomActionPerformed
+    }//GEN-LAST:event_ZoneSalaireActionPerformed
 
-    private void SalaireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalaireActionPerformed
+    private void ZonePrenomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZonePrenomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SalaireActionPerformed
-
-    private void AugmenterSalaireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AugmenterSalaireActionPerformed
-        // TODO add your handling code here:
-         String salaire = Salaire.getText();
-        int salaire_entier = Integer.parseInt(salaire);
-        salaire_entier++;
-        Salaire.setText(salaire_entier + "");
-    }//GEN-LAST:event_AugmenterSalaireActionPerformed
+    }//GEN-LAST:event_ZonePrenomActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,14 +150,14 @@ public class Fenêtre_Principale extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AugmenterSalaire;
-    private javax.swing.JLabel Demande;
     private javax.swing.JLabel Msg_Bienvenue;
     private javax.swing.JLabel Msg_Bye;
-    private javax.swing.JLabel Resultat;
-    private javax.swing.JTextField Salaire;
-    private javax.swing.JTextField ZoneNom;
+    private javax.swing.JTextArea Resultat;
+    private javax.swing.JScrollPane Resultat0;
+    private javax.swing.JTextField ZonePrenom;
+    private javax.swing.JTextField ZoneSalaire;
     private javax.swing.JButton bouton_valide;
+    private javax.swing.JLabel demandePrenom;
     private javax.swing.JLabel demandeSalaire;
     // End of variables declaration//GEN-END:variables
 }
