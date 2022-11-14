@@ -8,6 +8,17 @@ package tp3_heritage_gouin;
  *
  * @author gouin
  */
-public class Epée {
+public class Epée extends armes {
+    int finesse;
+    
+    public Epée(String n, int i, int a) {
+        super(n,1);
+        if (a>0) {
+            finesse = a;
+        }
+        else {
+            finesse = 0;
+        }
+    }
     
 }

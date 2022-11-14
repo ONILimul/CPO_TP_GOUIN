@@ -11,7 +11,7 @@ package tp3_heritage_gouin;
  */
 public class armes {
     String nom; //on initialise nos variables pour la classe
-    int lvlAttaque; 
+    private int lvlAttaque;
     
     public armes (String unNom, int puissance) { //on créer un constructeur pour rentrer les attributs des objets plus facilement
 

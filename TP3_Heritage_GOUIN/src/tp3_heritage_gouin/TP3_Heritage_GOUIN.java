@@ -15,10 +15,19 @@ public class TP3_Heritage_GOUIN {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        armes arme1 = new armes ("arme de base", 5); //on créer deux armes (une épée et un bâton)
+        armes arme1 = new armes ("arme de base", 5); //on créer deux armes pour tester la classe "armes"
         armes arme2 = new armes ("arme standard", 6);
-        System.out.println(arme1);
+        System.out.println(arme1); //on regarde si le constructeur et la méthode toString sont bien défini
         System.out.println(arme2);
+        
+        Epée Excalibur = new Epée ("Excalibur", 7,5);//on créer 2 épées
+        Epée Durandal = new Epée ("Durandal", 4 , 7);
+        Baton Chêne = new Baton ("Chêne", 4, 5);//on créer 2 bâtons
+        Baton Charme = new Baton ("Charme", 5, 6);
+        
+        
+        
+        
     }
     
 }
