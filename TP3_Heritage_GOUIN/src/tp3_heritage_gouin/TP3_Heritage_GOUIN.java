@@ -33,7 +33,7 @@ public class TP3_Heritage_GOUIN {
         Baton Chêne = new Baton ("Chêne", 4, 5);//on créer 2 bâtons
         Baton Charme = new Baton ("Charme", 5, 6);
         
-        ArrayList<armes> Reserve = new ArrayList<armes>(); // on créer un tableau dynamique
+        ArrayList<armes> Reserve = new ArrayList<>(); // on créer un tableau dynamique
         Reserve.add(Excalibur);
         Reserve.add(Durandal);
         Reserve.add(Chêne);
@@ -49,7 +49,7 @@ public class TP3_Heritage_GOUIN {
         Guerrier Conan = new Guerrier (false, 78,"Conan"); //on créer nos deux guerriers
         Guerrier Lannister = new Guerrier (true, 45, "Lannister");
         
-        ArrayList<Personnage> tabPerso = new ArrayList<Personnage>(); // on créer un tableau dynamique
+        ArrayList<Personnage> tabPerso = new ArrayList<>(); // on créer un tableau dynamique
         tabPerso.add(Gandalf);
         tabPerso.add(Garcimore);
         tabPerso.add(Conan);
@@ -59,8 +59,40 @@ public class TP3_Heritage_GOUIN {
             System.out.println(tabPerso.get(i));
         }
         
-       
+        //on va créer 1 guerrier, 1 magicien, 3 bâtons et épées 
+        Guerrier Thomas = new Guerrier (true, 89, "Thomas");
+        Magicien Dorian = new Magicien (true, 68, "Dorian");
+        Baton CielEtTerre = new Baton ("Ciel et Terre", 6, 6);
+        Baton VeriteEtMensonge = new Baton ("Verité et Mensonge", 7, 5);
+        Baton JusticeEtMal = new Baton ("Justice et Mal", 4, 8);
         
-       
+        Epée Dague = new Epée ("Dague", 3,4);
+        Epée Couteau = new Epée ("Couteau de Cuisine", 3,3);
+        Epée Glaive = new Epée ("Glaive Ravage (Abîme)", 99,99);
+        
+        tabPerso.add(Thomas);
+        tabPerso.add(Dorian);
+        Reserve.add(CielEtTerre);
+        Reserve.add(VeriteEtMensonge);
+        Reserve.add(JusticeEtMal);
+        Reserve.add(Dague);
+        Reserve.add(Couteau);
+        Reserve.add(Glaive);
+        
+        
+        Thomas.ajouterArmes(Glaive); //on attribue 3 armes au guerrier (2 épées et un baton)
+        Thomas.ajouterArmes(Dague);
+        Thomas.ajouterArmes(CielEtTerre);
+        
+        
+        Thomas.PrendreArme(Glaive);//on fait tenir une arme au guerrier
+        
+        Dorian.ajouterArmes(VeriteEtMensonge);
+        Dorian.ajouterArmes(JusticeEtMal);
+        Dorian.ajouterArmes(Couteau);
+        
+        System.out.println(Thomas); //on affiche les caractéristiques des personnages
+        System.out.println(Dorian);
+        
     }   
 }
