@@ -4,6 +4,9 @@
  */
 package tp3_heritage_gouin;
 
+import Personnage.Guerrier;
+import Personnage.Magicien;
+import Personnage.Personnage;
 import Armes.armes;
 import Armes.Epée;
 import Armes.Baton;
@@ -40,6 +43,24 @@ public class TP3_Heritage_GOUIN {
             System.out.println(Reserve.get(i));
         }
         
-    }
-    
+        Magicien Gandalf = new Magicien (true, 65,"Gandalf"); //on créer nos deux magiciens
+        Magicien Garcimore = new Magicien (false, 44, "garcimore");
+        
+        Guerrier Conan = new Guerrier (false, 78,"Conan"); //on créer nos deux guerriers
+        Guerrier Lannister = new Guerrier (true, 45, "Lannister");
+        
+        ArrayList<Personnage> tabPerso = new ArrayList<Personnage>(); // on créer un tableau dynamique
+        tabPerso.add(Gandalf);
+        tabPerso.add(Garcimore);
+        tabPerso.add(Conan);
+        tabPerso.add(Lannister);
+        int taillePerso = tabPerso.size();
+        for (int i=0; i<taillePerso; i++) { 
+            System.out.println(tabPerso.get(i));
+        }
+        
+       
+        
+       
+    }   
 }
